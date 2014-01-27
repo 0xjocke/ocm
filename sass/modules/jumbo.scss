@@ -1,0 +1,88 @@
+.jumbo{
+	background: url('/img/background.jpg') no-repeat;
+	background-size: cover;
+	min-height: 25rem;
+	margin-bottom: 1rem;
+	@media (max-width:950px) {
+		min-height: 15rem;
+	}
+}
+.jumbo-heading{
+	margin-top: 8%;
+	margin-bottom: 1rem;
+	@media (max-width: 500px) {
+		margin-top: 15%;
+		font-size: 1.5rem;
+	}
+
+}
+.jumbo-image{
+	margin-top:3rem;
+	margin-bottom:2rem;
+	width:100%;
+	@media (max-width: 900px) {
+		width: 60%;
+		margin-top: 1rem;
+	}
+}
+
+//subpage is fixed and needs and ghost element
+.jumbo__subpage{
+	z-index: -1;
+	margin-top: 1rem;
+	background: #cdcdcd;
+	.jumbo-heading{
+		margin-top: 23%;
+		margin-bottom: 0;
+		@media (max-width: 900px) {
+			margin-top: 2rem;
+		}
+	}
+}
+.fixed{
+	position: fixed;
+}
+.smallHeight{
+	min-height: 15rem;
+}
+
+//same bg as body and not fixed pos
+.jumbo__subpage-nobg{
+	background: darken(white, 4%);
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+	.jumbo-heading{
+		margin-top: 23%;
+		margin-bottom: 0;
+		@media (max-width: 900px) {
+			margin-top: 2rem;
+		}
+	}
+}
+.jumbo-form{
+	margin-top:2rem;
+	width:90%;
+	@media (max-width:900px) {
+		margin-top: 0;
+		width: 100%;
+	}
+}
+
+.jumbo-ghost{
+	@include container;
+	height:425px;
+	@media (max-width:900px) {
+		height: 450px;
+	}
+	@media (max-width:620px) {
+		height: 420px;
+	}
+}
+
+.jumbo-megamargin{
+	padding-top:8rem;
+	padding-bottom: 8rem;
+}
+
+

@@ -1,0 +1,51 @@
+.infobox{ 
+	h2{
+		margin: 0;
+	}
+	p{
+		padding-left: 0;
+	}
+	h3{
+		margin: 1rem 0 0 0;
+	}
+}
+.infobox-icon{
+	margin: 0 auto;
+	display: block;
+	width: 3rem;
+}
+.infobox-image{
+	width: 100%;
+	border-radius: 3px;
+	display: block;
+	@media (max-width:650px) {
+		width: 85%;	
+		margin: 0 auto;	
+	}
+}
+.infobox-iframe{
+	width: 80%;
+	height: 12rem;
+	margin-top:1rem;
+	@media (max-width:650px) {
+		width: 100%;
+	}
+}
+
+.infobox__megamargin{
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+	@media (max-width:650px) {
+		&:first-child{
+			margin-top: 2rem;
+		}
+		margin-bottom: 1rem;
+		margin-top: 0;
+	}
+}
+//add this class to a section parent to get 100% width bg color
+.infobox-bg{
+	width:100%;
+	background: darken(white, 4%);
+}
+

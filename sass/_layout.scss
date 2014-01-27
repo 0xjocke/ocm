@@ -1,0 +1,148 @@
+@import "susy";
+@import "fonts";
+@import "mixins";
+   
+   $total-columns: 12;
+   $column-width: 5em;
+   $gutter-width: 1em;
+   $grid-padding: $gutter-width;
+   $border-box-sizing: true;
+
+.container{
+	@include container;
+	//@include susy-grid-background;
+}
+
+h1{
+	@include pre(1,12);
+}
+.l-pre1{
+	@include pre(1,12);
+}
+.l-wide-pre2{
+	@include pre(2,12);
+	@media (max-width:900px) {
+	@include pre(0,12);
+		
+	}
+}
+
+/*__________Header____________
+*/
+
+.logo{
+	@include span-columns(2, 12);
+	@include squish(1,0,12);
+	img{
+	width: 100%;
+	height: auto;
+	}
+	@media (max-width: 620px) {
+		@include span-columns(6, 12);
+		@include squish(3,3,12);
+		img{
+			width:80%;
+		}
+	}
+}
+.phoneNrContainer{
+    	width: columns(12);	
+}
+nav{
+	margin-top: 2%;
+	@include span-columns(8 omega, 12);
+	@include post(1, 12);
+	>ul{
+		text-align: right;
+		@media (max-width: 620px) {
+			text-align: center;
+		}
+	}
+	@media (max-width: 620px) {
+		@include rem-fallback(margin-top, 1);
+		@include span-columns(12, 12);
+		text-align: center;
+	}
+}
+/*__________Index____________
+*/
+.jumbo{
+	@include span-columns(12, 12);	
+}
+
+.infobox{
+	@include rem-fallback(margin-top, 1.5);
+	@include span-columns(4, 12);
+	@include squish(1,1,12);
+	aside{
+		width: 80%;
+		margin-right: 15%;
+		@include rem-fallback(margin-top, 1);
+	}
+	@media (max-width:650px) {
+		@include span-columns(10, 12);
+		// @include susy-grid-background;
+	}
+}
+.infobox-wide{
+	@include span-columns(6, 12);
+	@include squish(0,0,12);
+	@media (max-width:650px) {
+		@include squish(1,0,12);
+		@include span-columns(11, 12);
+	
+	}
+}
+
+.shootout{
+	@include span-columns(12, 12);
+}
+
+/*__________Subpages____________
+*/
+
+.jumbo-content{
+	@include span-columns(5, 12);
+	@include squish(1,0,12);
+	@media (max-width:900px) {
+		@include span-columns(8, 12);
+		@include squish(2,2,12);
+	
+	}
+	@media (max-width:600px) {
+		@include span-columns(10, 12);
+		@include squish(1,1,12);
+	}
+}
+
+.jumbo-aside{
+	@include span-columns(5 omega,12);
+	@include squish(0,1,12);
+	@media (max-width:900px) {
+		@include span-columns(8, 12);
+		@include squish(2,2,12);
+	}
+	@media (max-width:600px) {
+		@include span-columns(10, 12);
+		@include squish(1,1,12);
+	}
+}
+
+.projectbox{
+	@include span-columns(10,12);
+	@include squish(1,1,12);
+}
+.projectbox-content{
+	@include span-columns(5,10);
+}
+.projectbox-aside{
+	@include span-columns(4 omega,10);
+	@include squish(0.5,0.5,10);
+}
+
+/*__________Footer____________
+*/
+
+footer{
+	@include span-columns(12, 12);
+}
