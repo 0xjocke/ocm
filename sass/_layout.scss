@@ -59,7 +59,7 @@ nav{
 		}
 	}
 	@media (max-width: 620px) {
-		@include rem-fallback(margin-top, 1);
+		margin-top:1rem;
 		@include span-columns(12, 12);
 		text-align: center;
 	}
@@ -71,13 +71,13 @@ nav{
 }
 
 .infobox{
-	@include rem-fallback(margin-top, 1.5);
+		margin-top:1.5rem;
 	@include span-columns(4, 12);
 	@include squish(1,1,12);
 	aside{
 		width: 80%;
 		margin-right: 15%;
-		@include rem-fallback(margin-top, 1);
+		margin-top:1rem;
 	}
 	@media (max-width:650px) {
 		@include span-columns(10, 12);
@@ -137,7 +137,7 @@ nav{
 }
 .projectbox-aside{
 	@include span-columns(4 omega,10);
-	@include squish(0.5,0.5,10);
+	@include squish(0,1,10);
 }
 
 /*__________Footer____________
